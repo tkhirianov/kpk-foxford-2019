@@ -5,9 +5,9 @@ def paint_background(width, height):
     """ Рисует фон - небо и землю на всю ширину и высоту листа """
     penSize(0)
     brushColor("#9eeaf5")
-    rectangle(0, 0, width - 1, height // 2 - 1)
+    rectangle(0, 0, width, height // 2)
     brushColor("#0e9325")
-    rectangle(0, 150, 450, 299)
+    rectangle(0, height // 2, width, height)
 
 def paint_house(x, y):
     """ Рисует домик.
@@ -37,7 +37,7 @@ def paint_sun(x, y):
 
 def paint_all(width, height):
     """ Должна нарисовать всё. """
-    paint_background(width, heigh1t)
+    paint_background(width, height)
     paint_house(68, 126)
     paint_tree(334, 188)
     paint_cloud(248, 53)
