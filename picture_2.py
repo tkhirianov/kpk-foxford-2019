@@ -11,7 +11,10 @@ def main():
 def paint_all(width, height):
     """ Должна нарисовать всё. """
     paint_background(width, height)
-    paint_house(68, 126, 115, 78)
+    paint_house(48, 160, 115, 78)
+    paint_house(262, 157, 80, 60)
+    for i in range(4, -1, -1):
+        paint_house(111 + i*20, 270 - i * 10, 50, 30)
     paint_tree(334, 188)
     paint_cloud(248, 53)
     paint_sun(396, 44)
@@ -31,7 +34,7 @@ def paint_house(x, y, width, height):
         width, height - ширина и высота стен домика
     """
     paint_walls(x, y, width, height)
-    paint_roof(x, y, width, height)
+    paint_roof(x, y, width, height*0.75)
 
     window_x, window_y = x + width // 3, y + height // 3
     window_width = width // 3
@@ -44,17 +47,30 @@ def paint_walls(x, y, width, height):
         x, y - координаты левой-верхней точки стены
         width, height - ширина и высота стены
     """
-    pass
+    penSize(1)
+    brushColor("#936b0e")
+    rectangle(x, y, x + width, y + height)
+
     
 def paint_roof(x, y, width, height):
     """ Рисусет крышу домика.
         x, y - координаты левой-нижней точки крыши
-        width, height - ширина и высота стены
+        width, height - ширина и высота крыши
     """
-    pass
+    penSize(1)
+    brushColor("#eb2f44")
+    polygon([(x, y), (x + width // 2, y - height),
+             (x + width, y), (x, y)])
+
 
 def paint_window(x, y, width, height):
-    pass
+    """ Рисусет окно.
+        x, y - координаты левой-верхней точки окна
+        width, height - ширина и высота окна
+    """
+    penSize(1)
+    brushColor("#0e9391")
+    rectangle(x, y, x + width, y + height)
 
 def paint_tree(x, y):
     """ Рисует дерево.
