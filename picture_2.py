@@ -43,7 +43,7 @@ def paint_house(x, y, width, height):
 
 
 def paint_walls(x, y, width, height):
-    """ Рисусет стены домика.
+    """ Рисует стены домика.
         x, y - координаты левой-верхней точки стены
         width, height - ширина и высота стены
     """
@@ -53,7 +53,7 @@ def paint_walls(x, y, width, height):
 
     
 def paint_roof(x, y, width, height):
-    """ Рисусет крышу домика.
+    """ Рисует крышу домика.
         x, y - координаты левой-нижней точки крыши
         width, height - ширина и высота крыши
     """
@@ -64,7 +64,7 @@ def paint_roof(x, y, width, height):
 
 
 def paint_window(x, y, width, height):
-    """ Рисусет окно.
+    """ Рисует окно.
         x, y - координаты левой-верхней точки окна
         width, height - ширина и высота окна
     """
